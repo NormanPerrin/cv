@@ -1,0 +1,125 @@
+:root {
+    --background: #fff;
+    --title: #fff;
+    --text: #222;
+    --invert-text: #f3f4f6;
+    --secondary-text: gray;
+    --hightlight: #696f83;
+}
+
+html {
+    height: 100%;
+    line-height: 1.5;
+    font-family: helvetica;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    background-color: var(--hightlight);
+}
+header > * {
+    padding: 1rem;
+    margin: 0;
+}
+header .me { color: var(--invert-text) } 
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--title);
+}
+
+header p {
+    margin: 0;
+    margin-top: .5rem;
+    max-width: 600px;
+}
+
+h3 { color: var(--hightlight) }
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+a:hover { color: blue }
+
+section ul {
+    padding: 0;
+    margin: 0;
+}
+li { list-style: none }
+
+header li { margin: .25rem 0 }
+header li a { color: var(--invert-text) }
+header li a:hover { color: var(--invert-text) }
+
+ul.contact li {
+    display: flex;
+    align-items: center;
+}
+ul.contact li svg {
+    fill: var(--invert-text);
+    width: 1rem;
+    height: 1rem;
+}
+ul.contact li a { margin-left: .5rem }
+
+body > section { margin-left: 1rem }
+h2 {
+    font-weight: 500;
+    border-bottom: 2px solid var(--hightlight);
+    color: var(--hightlight);
+}
+
+.expertise ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+.work { margin: 1.5rem 0 }
+.work:first-child { margin-top: 1rem }
+.work > * { margin: 0 }
+.work .name { font-weight: 600 }
+
+.whe {
+    display: flex;
+    font-style: oblique;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+.whe p {
+    margin: 0;
+    color: var(--secondary-text);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 1rem;
+}
+.info > div > p {
+    margin: 0;
+    font-style: oblique;
+    color: var(--secondary-text);
+}
+.info > div ul { padding-left: 5.rem }
+.info > div li::before, .studies li::before {
+    content: "\25AB";
+    position: relative;
+    margin-right: .5rem;
+    color: gray;
+}
+.work .contact { font-style: oblique }
+.work .contact span { color: var(--hightlight) }
