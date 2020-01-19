@@ -20,8 +20,13 @@ body {
     margin: 0 auto;
 }
 
+p {
+    margin: 0;
+}
+
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-left: 1rem;
@@ -81,17 +86,12 @@ h2 {
     border-bottom: 2px solid var(--hightlight);
     color: var(--hightlight);
 }
-
-.expertise ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
+h3 a { color: var(--hightlight) }
+h3 a:hover { color: var(--hightlight) }
 
 .work { margin: 1.5rem 0 }
 .work:first-child { margin-top: 1rem }
 .work > * { margin: 0 }
-.work .name { font-weight: 600 }
 
 .whe {
     display: flex;
@@ -104,22 +104,22 @@ h2 {
     color: var(--secondary-text);
 }
 
-.info {
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    grid-gap: 1rem;
-}
-.info > div > p {
+.achievements > p {
     margin: 0;
     font-style: oblique;
     color: var(--secondary-text);
 }
-.info > div ul { padding-left: 5.rem }
-.info > div li::before, .studies li::before {
+.achievements ul, .studies ul { padding-left: 1rem }
+.achievements li::before, .studies li::before {
     content: "\25AB";
     position: relative;
     margin-right: .5rem;
     color: gray;
 }
-.work .contact { font-style: oblique }
-.work .contact span { color: var(--hightlight) }
+.work .contact, .work .tech { font-style: oblique }
+.work > p > span { color: var(--hightlight) }
+
+@media (max-width: 768px) {
+    .whe { flex-direction: column }
+    .achievements ul, .studies ul { padding-left: .5rem }
+}
