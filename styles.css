@@ -26,7 +26,6 @@ p {
 
 header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-left: 1rem;
@@ -40,6 +39,7 @@ header .me { color: var(--invert-text) }
 
 h1 {
     margin: 0;
+    line-height: 1.3;
     font-size: 2rem;
     font-weight: 500;
     color: var(--title);
@@ -95,6 +95,7 @@ h3 a:hover { color: var(--hightlight) }
 
 .whe {
     display: flex;
+    flex-wrap: wrap;
     font-style: oblique;
     justify-content: space-between;
     padding-right: 1rem;
@@ -103,6 +104,7 @@ h3 a:hover { color: var(--hightlight) }
     margin: 0;
     color: var(--secondary-text);
 }
+.whe p:first-child { padding-right: 1rem }
 
 .achievements > p {
     margin: 0;
@@ -119,7 +121,7 @@ h3 a:hover { color: var(--hightlight) }
 .work .contact, .work .tech { font-style: oblique }
 .work > p > span { color: var(--hightlight) }
 
-@media (max-width: 768px) {
-    .whe { flex-direction: column }
+@media (max-width: 530px) {
+    header { flex-wrap: wrap }
     .achievements ul, .studies ul { padding-left: .5rem }
 }
