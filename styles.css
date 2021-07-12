@@ -17,12 +17,10 @@ html {
 
 body {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
 }
 
-p {
-    margin: 0;
-}
+p { margin: 0; }
 
 header {
     display: flex;
