@@ -18,6 +18,7 @@ html {
 body {
     max-width: 1000px;
     margin: 0 auto 2rem auto;
+    padding-bottom: 1rem;
 }
 
 p { margin: 0; }
@@ -87,7 +88,7 @@ h2 {
 h3 a { color: var(--hightlight) }
 h3 a:hover { color: var(--hightlight) }
 
-.work { margin: 1.5rem 0 }
+.work { margin: 1rem 0 }
 .work:first-child { margin-top: 1rem }
 .work > * { margin: 0 }
 
@@ -109,9 +110,8 @@ h3 a:hover { color: var(--hightlight) }
     font-style: oblique;
     color: var(--secondary-text);
 }
-.achievements ul, .studies ul { padding-left: 1rem }
 .achievements li::before, .studies li::before {
-    content: "\25AB";
+    content: "•";
     position: relative;
     margin-right: .5rem;
     color: gray;
